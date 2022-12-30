@@ -1,0 +1,21 @@
+/* common variables */
+:root {
+    --font-family-raleway: Raleway;
+    --color-primary: #0065FC;
+    --color-secondary: #DEEBFF;
+    --color-background: #F2F2F2;
+}
+
+/* general */
+body {
+    max-width: 1400px;
+}
+/* tablet */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+
+}
