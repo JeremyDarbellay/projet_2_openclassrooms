@@ -1,15 +1,35 @@
 /* common variables */
 :root {
-    --font-family-raleway: Raleway;
+    --font-family-raleway: 'Raleway', sans-serif;
     --color-primary: #0065FC;
     --color-secondary: #DEEBFF;
     --color-background: #F2F2F2;
+    --font-weight-bold: 700;
+    --font-weight-light: 400;
 }
 
 /* general */
+
+/* elements */
 body {
     max-width: 1400px;
+    font-family: var(--font-family-raleway);
+    font-weight: var(--font-weight-light);
 }
+
+h1, h2, h3 {
+    font-weight: var(--font-weight-bold);
+}
+
+/* class */
+.footer {
+    background-color: var(--color-background);
+}
+.header {}
+
+
+.filter {}
+
 /* tablet */
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
