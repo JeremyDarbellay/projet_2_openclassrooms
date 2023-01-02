@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/746564dcc3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <!-- En-tête logo + liens principaux -->
+        <header>
+            <h1><img id="logo"></h1> 
+            <nav> 
+                <ul>
+                    <li><a class="nav-links" href="#">Hébergements</a></li>
+                    <li><a class="nav-links" href="#">Activités</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Recherche -->
+            <section>
+                <h1>Trouver ...</h1>
+                <p>En plein centre-ville ou en pleine nature</p>
+                <form action="" method="post" id="search">
+                    <!-- Mieux que div ? Voir si qqchose en semantic, fieldset ? me paraît pas bieng -->
+                    <div class="searchbar">
+                        <input type="search" name="ville" id="ville">
+                        <input type="submit" value="rechercher">
+                    </div>
+                    <fieldset>
+                        <!-- span ?? -->
+                        <span>Filtres</span>
+
+                        <label for="economic">Économique</label>
+                        <input type="checkbox" name="economic" id="economic" class="filter">
+
+                        <label for="familial">Familial</label>
+                        <input type="checkbox" name="familial" id="familial" class="filter">
+
+                        <label for="romantic">Romantique</label>
+                        <input type="checkbox" name="romantic" id="romantic" class="filter">
+
+                        <label for="pets">Animaux autorisés</label>
+                        <input type="checkbox" name="pets" id="pets" class="filter">
+
+                    </fieldset>
+                </form>
+
+                <!-- je suppose que ça se met à jour dynamiquement selon la recherche -->
+                <div>Infobar</div>
+            </section>
+
+            <!-- Offres - section principale -->
+            <section>
+                    <h1>Hébergements à Marseille</h1>
+                    <div>
+                        <article class="card">
+                            <img src="" alt="">
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="">
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="">
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="">
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="">
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="">
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </article>
+                    </div>
+                    <a href="#">Afficher plus</a>
+            </section>
+
+            <!-- Populaire -->
+            <aside>
+                <h1>Les plus populaires</h1>
+                <div>
+                    <article class="horizontal-card">
+                        <img src="" alt="">
+                        <div>
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </div>
+                    </article>
+                    <article class="horizontal-card">
+                        <img src="" alt="">
+                        <div>
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </div>
+                    </article>
+                    <article class="horizontal-card">
+                        <img src="" alt="">
+                        <div>
+                            <h2>titre carte</h2>
+                            <p class="price">Nuit à partir de XX€</p>
+                            <footer class="rating">* * * * x  </footer>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <!-- Activités -->
+            <section>
+                <h1>Activités à Marseille</h1>
+                <div>
+                    <article class="activity-card">
+                        <img src="" alt="">
+                        <h2>titre carte<a href="#" class="more"></a></h2>
+                    </article>
+                    <article class="activity-card">
+                        <img src="" alt="">
+                        <h2>titre carte<a href="#" class="more"></a></h2>
+                    </article>
+                    <article class="activity-card">
+                        <img src="" alt="">
+                        <h2>titre carte<a href="#" class="more"></a></h2>
+                    </article>
+                    <article class="activity-card">
+                        <img src="" alt="">
+                        <h2>titre carte<a href="#" class="more"></a></h2>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <nav aria-labelledby="site-navigation">
+                <section>
+                    <h1 id="navigation-a-propos">À propos</h1>
+                    <ul>
+                        <li><a href="#">lien</a></li>
+                        <li><a href="#">lien</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1 id="navigation-hébergement">titre3</h1>
+                    <ul>
+                        <li><a href="#">lien</a></li>
+                        <li><a href="#">lien</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1 id="navigation-assistance">titre3</h1>
+                    <ul>
+                        <li><a href="#">lien</a></li>
+                        <li><a href="#">lien</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </footer>
+
+    </body>
+</html>
