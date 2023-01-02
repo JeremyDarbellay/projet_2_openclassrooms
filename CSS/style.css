@@ -1,6 +1,5 @@
 
 /* dev css, à enlever en fin de projet */
-.header {border-bottom: black 1px solid;}
 html {background-color: #999999;}
 body {background-color: white;}
 /* fin dev */
@@ -34,6 +33,7 @@ body {
 
 h1, h2, h3 {
     font-weight: var(--font-weight-bold);
+    font-size: 22px;
 }
 
 /* class */
@@ -49,7 +49,7 @@ h1, h2, h3 {
     margin: 44px;
     margin-left: 55px;
     width: 61px;
-    height: auto;
+    height: 19px;
 }
 .nav-links {
     display: flex;
@@ -57,7 +57,7 @@ h1, h2, h3 {
 }
 .nav-links>li {
     padding: 46px;
-    border: transparent 2px solid;
+    border-top: transparent 2px solid;
 }
 .nav-links>li:last-child {
     margin-right: 21px;
@@ -73,14 +73,93 @@ h1, h2, h3 {
     color: var(--color-primary);
 }
 
+/* section recherche */
+.search-section {
+    padding: 55px;
+    padding-top: 0;
+}
+/* searchbar */ 
+.searchbar {
+    border: none;
+    margin-bottom: 2em;
+    margin-top: 1.25em;
+    border-radius: 15px;
+    width: fit-content;
+    display: flex;
+    align-items: stretch;
+    border: 1px var(--color-background) solid;
+}
+.searchbar>legend {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+}
+.searchbar>* {
+    padding: 14px 16px;
+    font-size: 18px;
+}
+.searchbar>i:first-of-type {
+    background-color: var(--color-background);
+    border-radius: 15px 0 0 15px;
+}
+.searchbar>input {
+    appearance: none;
+    border: unset;
+    font-weight: var(--font-weight-bold);
+}
+.searchbar>input:last-child{
+    background-color: var(--color-primary);
+    border-radius: 0 15px 15px 0;
+    color: white;
+    cursor: pointer;
+}
 
+/* filterbar */
+.filter-bar {
+    margin-bottom: 2.25em;
+    border: unset;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 20px;
+}
+.filter-bar>legend {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.filter-bar>label>i {
+    color: var(--color-primary);
+}
+.filter-bar>input:checked+label {
+    background-color: var(--color-secondary);
+}
+.filter-bar>input {
+    visibility: hidden;
+}
+.filter {
+    border: 2px solid #D9D9D9;
+    border-radius: 2em;
+    padding: 14px 20px;
+    width: max-content;
+}
+
+/* infobar */
+i.fa-info {
+    border: 1px solid #D9D9D9;
+    padding: 3px;
+    text-align:center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: var(--color-primary);
+}
 /* footer */
 .footer {
     background-color: var(--color-background);
 }
-
-
-.filter {}
 
 /* tablet */
 @media screen and (max-width: 991px) and (min-width: 768px) {
