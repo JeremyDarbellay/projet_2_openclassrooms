@@ -57,7 +57,7 @@ h1, h2, h3 {
 }
 .nav-links>li {
     padding: 46px;
-    border-top: transparent 2px solid;
+    border: transparent 2px solid;
 }
 .nav-links>li:last-child {
     margin-right: 21px;
