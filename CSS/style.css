@@ -1,4 +1,10 @@
-/* common variables */
+
+/* dev css, à enlever en fin de projet */
+.header {border-bottom: black 1px solid;}
+html {background-color: #999999;}
+body {background-color: white;}
+/* fin dev */
+/* common vars */
 :root {
     --font-family-raleway: 'Raleway', sans-serif;
     --color-primary: #0065FC;
@@ -10,11 +16,20 @@
 
 /* general */
 
+/* resetting default margin */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* elements */
 body {
     max-width: 1400px;
     font-family: var(--font-family-raleway);
     font-weight: var(--font-weight-light);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1, h2, h3 {
@@ -22,10 +37,47 @@ h1, h2, h3 {
 }
 
 /* class */
+
+/* sections */
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.header>#logo {
+    margin: 44px;
+    margin-left: 55px;
+    width: 61px;
+    height: auto;
+}
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+.nav-links>li {
+    padding: 46px;
+    border-top: transparent 2px solid;
+}
+.nav-links>li:last-child {
+    margin-right: 21px;
+}
+.main-links>a {
+    text-decoration: none;
+    color: black;
+}
+.main-links:hover {
+    border-color: var(--color-primary);
+}
+.main-links:hover>a {
+    color: var(--color-primary);
+}
+
+
+/* footer */
 .footer {
     background-color: var(--color-background);
 }
-.header {}
 
 
 .filter {}
