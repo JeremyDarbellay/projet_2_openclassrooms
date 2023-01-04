@@ -1,7 +1,7 @@
 
 /* dev css, à enlever en fin de projet */
 html {background-color: #999999;}
-body {background-color: white;}
+body {background-color: white;padding-bottom:5em;}
 /* fin dev */
 /* common vars */
 :root {
@@ -173,11 +173,13 @@ i.fa-info {
 .card-main {
     display:flex;
     flex-direction:column;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius:20px;
+    width: 30%;
 }
 .card-main>img {
     height: 124px;
-    width: 246px;
+    width: 100%;
     object-fit: cover;
     border: white 5px solid;
     border-radius: 0.75em 0.75em 0 0;
@@ -202,17 +204,19 @@ i.fa-info {
 
 /* card sponsored */
 .card-sponsored {
-    min-width: 343px;
-    height: 144px;
+    width: 100%;
+    height: 150px;
     display: flex;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius:20px;
 }
 .card-sponsored>img {
-    width: 137px;
-    height: 144px;
+    width: 40%;
+    height: auto;
     border: white 5px solid;
     border-radius: 20px 0 0 20px;
     object-fit: cover;
+    flex: 0 0 auto
 }
 .card-sponsored>div {
     display: flex;
@@ -222,6 +226,9 @@ i.fa-info {
     background-color: white;
     border-radius: 0 20px 20px 0;
     flex-grow: 1;
+}
+.card-sponsored>div>div>h3 {
+    margin-bottom: 7px;
 }
 
 /* container et section hebergement */
@@ -236,16 +243,18 @@ i.fa-info {
     padding: 2.5em; 
     background-color: var(--color-background);
     border-radius: 20px;
+    width: 66%;
 }
 .flex-hebergement {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5em;
+    gap: 2em;
     margin-top: 1.25em;
     margin-bottom: 1.75em;
+    justify-content: justify;
 }
 .flex-hebergement>article {
-    flex-shrink: 0;
+    flex: 1 1 auto;
 }
 .section-hebergement>p {
     font-size: 18px;
@@ -257,6 +266,7 @@ i.fa-info {
     padding: 2em;
     background-color: var(--color-background);
     border-radius: 20px;
+    width:33%;
 }
 .fa-chart-line {
     color: var(--color-primary);
@@ -267,6 +277,42 @@ i.fa-info {
     flex-direction: column;
     padding-top: 20px;
     gap: 2em;
+}
+
+/* section activités */
+.activity-section {
+    margin-top: 3.75em;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.activity-section>h2 {
+    margin-bottom: 1.25em;
+}
+.activity-container {
+    display:flex;
+    gap: 43px;
+
+}
+.activity-card {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.activity-card>img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    flex-grow: 1;
+}
+.activity-card>h3 {
+    height: 56px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
 }
 
 /* footer */
