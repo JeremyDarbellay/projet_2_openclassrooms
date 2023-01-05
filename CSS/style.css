@@ -1,8 +1,3 @@
-
-/* dev css, à enlever en fin de projet */
-html {background-color: #999999;}
-body {background-color: white;padding-bottom:5em;}
-/* fin dev */
 /* common vars */
 :root {
     --font-family-raleway: 'Raleway', sans-serif;
@@ -240,7 +235,7 @@ i.fa-info {
 }
 .section-hebergement {
     flex-grow: 1;
-    padding: 2.5em; 
+    padding: 42px 40px 46px 40px;
     background-color: var(--color-background);
     border-radius: 20px;
     width: 66%;
@@ -278,7 +273,7 @@ i.fa-info {
     gap: 2em;
 }
 
-/* section activités */
+/* activity section */
 .activity-section {
     margin-top: 3.75em;
     padding-left: 50px;
@@ -290,29 +285,39 @@ i.fa-info {
 .activity-container {
     display:flex;
     gap: 43px;
-
 }
 .activity-card {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-    width: 23%;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 2 / 3;
+    width: 23%;
 }
 .activity-card>img {
     object-fit: cover;
-    width: 100%;
-    height: auto;
-    border-radius: 20px 20px 0 0;
-    flex-grow: 1;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    top: 0;
+    position: absolute;
+    z-index: 1;
 }
-.activity-card>h3 {
+.activity-card>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 56px;
-    border-radius: 0 0 20px 20px;
-    display: flex;
-    align-items: center;
+    border-radius: 0 0 18px 18px;
     padding-left: 16px;
+    background-color: white;
+    z-index: 2;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 /* footer */
 .site-footer {
@@ -344,13 +349,8 @@ i.fa-info {
 
 /* tablet */
 @media screen and (max-width: 991px) and (min-width: 768px) {
-    body {
-        background-color: red!important;
-    }
-
 }
 
 /* mobile */
 @media screen and (max-width: 767px) {
-
 }

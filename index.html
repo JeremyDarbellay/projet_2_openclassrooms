@@ -1,268 +1,292 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/746564dcc3.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="CSS/style.css">
-    </head>
-    <body>
-        <!-- En-tête logo + liens principaux -->
-        <header class="header">
-            <img id="logo" alt="Le logo de Booki" src="images/logo/Booki.png" > 
-            <nav> 
-                <ul class="nav-links">
-                    <li class="main-links"><a href="#">Hébergements</a></li>
-                    <li class="main-links"><a href="#">Activités</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <main>
-            <!-- Section recherche -->
-            <section class="search-section">
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <!-- @TODO vérifier si <p> est indiqué ici -->
-                <p>En plein centre-ville ou en pleine nature</p>
-                <form method="post" action="">
-    
-                    <!-- search bar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/746564dcc3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- En-tête logo + liens principaux -->
+    <header class="header">
+        <img id="logo" alt="Le logo de Booki" src="images/logo/Booki.png">
+        <nav>
+            <ul class="nav-links">
+                <li class="main-links"><a href="#">Hébergements</a></li>
+                <li class="main-links"><a href="#">Activités</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section recherche -->
+        <section class="search-section">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <!-- @TODO vérifier si <p> est indiqué ici -->
+            <p>En plein centre-ville ou en pleine nature</p>
+            <form method="post" action="">
 
                 <!-- search bar -->
-                    <fieldset class="searchbar">
-                        <legend>Barre de recherche</legend>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <input name="ville" id="ville" type="search" value="Marseille, France">
-                        <input type="submit" value="Rechercher" class="submit-desktop">
-                    </fieldset>
-    
-                    <!-- filter bar -->
-                    <fieldset class="filter-bar">
-                        <legend>Filtres de recherche</legend>
-                        Filtres
+                <fieldset id="barre-de-recherche" class="searchbar">
+                    <legend>Barre de recherche</legend>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input name="ville" id="ville" type="search" value="Marseille, France">
+                    <input type="submit" value="Rechercher" class="submit-desktop">
+                </fieldset>
 
-                        <input type="checkbox" name="economic" id="economic">
-                        <label for="economic" class="filter"><i class="fa-solid fa-money-bill-wave"></i>&nbsp;Économique</label>
+                <!-- filter bar -->
+                <fieldset class="filter-bar">
+                    <legend>Filtres de recherche</legend>
+                    Filtres
 
-                        <input type="checkbox" name="familial" id="familial">
-                        <label for="familial" class="filter"><i class="fa-solid fa-person"></i>&nbsp;Familial</label>
+                    <input type="checkbox" name="economic" id="economic">
+                    <label for="economic" class="filter"><i
+                            class="fa-lg fa-solid fa-money-bill-wave"></i>&nbsp;&nbsp;Économique</label>
 
-                        <input type="checkbox" name="romantic" id="romantic">
-                        <label for="romantic" class="filter"><i class="fa-solid fa-heart"></i>&nbsp;Romantique</label>
+                    <input type="checkbox" name="familial" id="familial">
+                    <label for="familial" class="filter"><i
+                            class="fa-lg fa-solid fa-person"></i>&nbsp;&nbsp;Familial</label>
 
-                        <input type="checkbox" name="pets" id="pets">
-                        <label for="pets" class="filter"><i class="fa-solid fa-dog"></i>&nbsp;<span>Animaux autorisés</span></label>
+                    <input type="checkbox" name="romantic" id="romantic">
+                    <label for="romantic" class="filter"><i
+                            class="fa-lg fa-solid fa-heart"></i>&nbsp;&nbsp;Romantique</label>
 
-                    </fieldset>
-    
-                </form>
-                <p class="infobar"><i class="fa-solid fa-info" aria-hidden="true"></i> Plus de 500 logements sont disponibles dans cette ville</p>
-            </section>
+                    <input type="checkbox" name="pets" id="pets">
+                    <label for="pets" class="filter"><i class="fa-lg fa-solid fa-dog"></i>&nbsp;&nbsp;Animaux
+                        autorisés</label>
 
-            <!-- container Hébergements -->
-            <div class="container-hebergement">
-                <section class="section-hebergement">
-                    <h2>Hébergements à Marseille </h2>
-                    <div class="flex-hebergement">
-                        <article class="card-main">
-                            <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Un lit superposé entouré de fenêtres donnant sur la rue">
-                            <div>
-                                <h3>Auberge de la Canebière</h3>
-                                <p>Nuit à partir de 25<span class="bold">€</span></p>
-                                <p class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </p>
-                            </div>
-                        </article>
-                        <article class="card-main">
-                                <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Deux lits dans une chambre claire">
-                                <div>
-                                    <h3>Hôtel du port</h3>
-                                    <p>Nuit à partir de 52<span class="bold">€</span></p>
-                                    <div class="rating">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                            </div>
-                        </article>
-                        <article class="card-main">
-                                <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Un lit à coté d'une penderie">
-                                <div>
-                                    <h3>Hôtel les mouettes</h3>
-                                    <p>Nuit à partir de 76<span class="bold">€</span>
-                                    </p>
-                                    <div class="rating">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                            </div>
-                        </article>
-                        <article class="card-main">
-                            <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Un lit bleu et blanc">
-                            <div>
-                                <h3>Hôtel de la mer</h3>
-                                <p>Nuit à partir de 46<span class="bold">€</span></p>
-                                <p class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </p>
-                            </div>
-                        </article>
-                        <article class="card-main">
-                                <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Des lits superposés avec une armature en bois">
-                                <div>
-                                    <h3>Auberge Le Panier</h3>
-                                    <p>Nuit à partir de 23<span class="bold">€</span></p>
-                                    <div class="rating">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                            </div>
-                        </article>
-                        <article class="card-main">
-                                <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Un lit simple à coté d'une fenêtre et d'un bureau">
-                                <div>
-                                    <h3>Hôtel chez Amina</h3>
-                                    <p>Nuit à partir de 96<span class="bold">€</span>
-                                    </p>
-                                    <div class="rating">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                            </div>
-                        </article>
-                    </div>
-                    <p class="bold">Afficher plus</p>
-                </section>
-                <aside class="section-populaire">
-                    <h2>Les plus populaires<i class="fa-solid fa-chart-line"></i></h2>
-                    <div>
-                        <article class="card-sponsored">
-                            <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Un lit double blanc dans une chambre verte">
-                            <div>
-                                <div>
-                                    <h3>Auberge la Canebière</h3>
-                                    <p>Nuit à partir de 25<span class="bold">€</span></p>
-                                </div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card-sponsored">
-                            <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="un lit tapissier beige matelassé">
-                            <div>
-                                <div>
-                                    <h3>Chambres d'hôtes Au cœur de l'eau</h3>
-                                    <p>Nuit à partir de 71<span class="bold">€</span></p>
-                                </div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card-sponsored">
-                            <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Un lit double avec une tête de lit en bois">
-                            <div>
-                                <div>
-                                    <h3>Hôtel Bleu et Blanc</h3>
-                                    <p>Nuit à partir de 68<span class="bold">€</span></p>
-                                </div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </aside>
-            </div>
+                </fieldset>
+            </form>
+            <p class="infobar"><i class="fa-solid fa-info" aria-hidden="true"></i> &nbsp;Plus de 500 logements sont
+                disponibles dans cette ville</p>
+        </section>
 
-            <!-- Activités -->
-            <section class="activity-section">
-                <h2>Activités à Marseille</h2>
-                <div class="activity-container">
-                    <article class="activity-card">
-                        <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Le vieux port de Marseille">
-                        <h3>Vieux-Port</h3>
+        <!-- container Hébergements -->
+        <div class="container-hebergement">
+            <section class="section-hebergement">
+                <h2>Hébergements à Marseille </h2>
+                <div class="flex-hebergement">
+                    <article class="card-main">
+                        <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                            alt="Un lit superposé entouré de fenêtres donnant sur la rue">
+                        <div>
+                            <h3>Auberge de la Canebière</h3>
+                            <p>Nuit à partir de 25<span class="bold">€</span></p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
                     </article>
-                    <article class="activity-card">
-                        <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Un fort en haut d'une pente rocheuse">
-                        <h3>Fort de Pomègues</h3>
+                    <article class="card-main">
+                        <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                            alt="Deux lits dans une chambre claire">
+                        <div>
+                            <h3>Hôtel du port</h3>
+                            <p>Nuit à partir de 52<span class="bold">€</span></p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
                     </article>
-                    <article class="activity-card">
-                        <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Vue du haut d'une falaise donnant sur la mer">
-                        <h3>Parc national des Calanques</h3>
-                    </article>
-                    <article class="activity-card">
-                        <img src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="La basilique Notre-Dame-de-la-Garde surplombant la ville">
-                        <h3>Notre-Dame-de-la-Garde</h3>
+                    <article class="card-main">
+                        <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                            alt="Un lit à coté d'une penderie">
+                        <div>
+                            <h3>Hôtel les mouettes</h3>
+                            <p>Nuit à partir de 76<span class="bold">€</span></p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
                     </article>
                 </div>
+                <div class="flex-hebergement">
+                    <article class="card-main">
+                        <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                            alt="Un lit bleu et blanc">
+                        <div>
+                            <h3>Hôtel de la mer</h3>
+                            <p>Nuit à partir de 46<span class="bold">€</span></p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-main">
+                        <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                            alt="Des lits superposés avec une armature en bois">
+                        <div>
+                            <h3>Auberge Le Panier</h3>
+                            <p>Nuit à partir de 23<span class="bold">€</span></p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-main">
+                        <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                            alt="Un lit simple à coté d'une fenêtre et d'un bureau">
+                        <div>
+                            <h3>Hôtel chez Amina</h3>
+                            <p>Nuit à partir de 96<span class="bold">€</span>
+                            </p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="bold">Afficher plus</p>
             </section>
+            <aside class="section-populaire">
+                <h2>Les plus populaires<i class="fa-solid fa-chart-line"></i></h2>
+                <div>
+                    <article class="card-sponsored">
+                        <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                            alt="Un lit double blanc dans une chambre verte">
+                        <div>
+                            <div>
+                                <h3>Hôtel Le soleil du matin</h3>
+                                <p>Nuit à partir de 128<span class="bold">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-sponsored">
+                        <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                            alt="un lit tapissier beige matelassé">
+                        <div>
+                            <div>
+                                <h3>Chambres d'hôtes Au cœur de l'eau</h3>
+                                <p>Nuit à partir de 71<span class="bold">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-sponsored">
+                        <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                            alt="Un lit double avec une tête de lit en bois">
+                        <div>
+                            <div>
+                                <h3>Hôtel Bleu et Blanc</h3>
+                                <p>Nuit à partir de 68<span class="bold">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                                <i class="fa-solid fa-star fa-sm"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
 
-        </main>
+        <!-- activity section -->
+        <section class="activity-section">
+            <h2>Activités à Marseille</h2>
+            <div class="activity-container">
+                <article class="activity-card">
+                    <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                        alt="Le vieux port de Marseille">
+                    <div>
+                        <h3>Vieux-Port</h3>
+                    </div>
+                </article>
+                <article class="activity-card">
+                    <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                        alt="Un fort en haut d'une pente rocheuse">
+                    <div>
+                        <h3>Fort de Pomègues</h3>
+                    </div>
+                </article>
+                <article class="activity-card">
+                    <img src="images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                        alt="Vue du haut d'une falaise donnant sur la mer">
+                    <div>
+                        <h3>Parc national des Calanques</h3>
+                    </div>
+                </article>
+                <article class="activity-card">
+                    <img src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        alt="La basilique Notre-Dame-de-la-Garde surplombant la ville">
+                    <div>
+                        <h3>Notre-Dame-de-la-Garde</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <nav>
+            <section class="footer-section">
+                <h2 id="navigation-a-propos">À propos</h2>
+                <ul class="footer-links">
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h2 id="navigation-hébergement">Nos hébergements</h2>
+                <ul class="footer-links">
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Proposer votre hôtel</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h2 id="navigation-assistance">Assistance</h2>
+                <ul class="footer-links">
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </section>
+        </nav>
+    </footer>
+</body>
 
-        <footer class="site-footer">
-            <nav>
-                <section class="footer-section">
-                    <h2 id="navigation-a-propos">À propos</h2>
-                    <ul class="footer-links">
-                        <li><a href="#">Fonctionnement du site</a></li>
-                        <li><a href="#">Conditions générales</a></li>
-                        <li><a href="#">Données et confidentialité</a></li>
-                    </ul>
-                </section>
-                <section class="footer-section">
-                    <h2 id="navigation-hébergement">Nos hébergements</h2>
-                    <ul class="footer-links">
-                        <li><a href="#">Charte qualité</a></li>
-                        <li><a href="#">Proposer votre hôtel</a></li>
-                    </ul>
-                </section>
-                <section class="footer-section">
-                    <h2 id="navigation-assistance">Assistance</h2>
-                    <ul class="footer-links">
-                        <li><a href="#">Centre d'aide</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </section>
-            </nav>
-        </footer>
-
-    </body>
 </html>
