@@ -155,9 +155,6 @@ label.submit {
 .filter>i {
     color: var(--color-primary);
 }
-.filter-bar>div>input:checked+label {
-    background-color: var(--color-secondary);
-}
 .filter-bar>div>input:checked+label, .filter:hover {
     background-color: var(--color-secondary);
 }
@@ -184,6 +181,12 @@ label.submit {
 
 /* infobar */
 
+.infobar {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
 i.fa-info {
     border: 1px solid #D9D9D9;
     padding: 3px;
@@ -202,7 +205,7 @@ i.fa-info {
     flex-direction: column;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    flex: 1 1 auto;
+    height: 100%;
 }
 .accommodation-card>img {
     height: 124px;
@@ -500,6 +503,12 @@ i.fa-info {
     }
     .filter>i {
         font-size: 20px;
+    }
+
+    /* infobar */
+
+    .infobar {
+        align-items: flex-start;
     }
 
     /* hébergement */
