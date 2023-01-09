@@ -37,30 +37,35 @@
                     <legend>Barre de recherche</legend>
                     <i class="fa-solid fa-location-dot"></i>
                     <input name="ville" id="ville" type="search" value="Marseille, France">
-                    <input type="submit" value="Rechercher" class="submit-desktop">
+                    <label for="Rechercher" class="submit"><i class="fa-solid fa-search"></i></label>
+                    <input type="submit" name="Rechercher" value="Rechercher" class="submit">
                 </fieldset>
 
                 <!-- filter bar -->
                 <fieldset class="filter-bar">
                     <legend>Filtres de recherche</legend>
-                    Filtres
-
-                    <input type="checkbox" name="economic" id="economic">
-                    <label for="economic" class="filter"><i
-                            class="fa-lg fa-solid fa-money-bill-wave"></i>&nbsp;&nbsp;Économique</label>
-
-                    <input type="checkbox" name="familial" id="familial">
-                    <label for="familial" class="filter"><i
-                            class="fa-lg fa-solid fa-person"></i>&nbsp;&nbsp;Familial</label>
-
-                    <input type="checkbox" name="romantic" id="romantic">
-                    <label for="romantic" class="filter"><i
-                            class="fa-lg fa-solid fa-heart"></i>&nbsp;&nbsp;Romantique</label>
-
-                    <input type="checkbox" name="pets" id="pets">
-                    <label for="pets" class="filter"><i class="fa-lg fa-solid fa-dog"></i>&nbsp;&nbsp;Animaux
-                        autorisés</label>
-
+                    <div>
+                        Filtres
+                    </div>
+                    <div>
+                        <input type="checkbox" name="economic" id="economic">
+                        <label for="economic" class="filter"><i
+                                class="fa-lg fa-solid fa-money-bill-wave"></i>&nbsp;&nbsp;Économique</label>
+    
+                        <input type="checkbox" name="familial" id="familial">
+                        <label for="familial" class="filter"><i
+                                class="fa-lg fa-solid fa-person"></i>&nbsp;&nbsp;Familial</label>
+                            </div>
+                            <div>
+                        <input type="checkbox" name="romantic" id="romantic">
+                        <label for="romantic" class="filter"><i
+                                class="fa-lg fa-solid fa-heart"></i>&nbsp;&nbsp;Romantique</label>
+    
+                        <input type="checkbox" name="pets" id="pets">
+                        <label for="pets" class="filter"><i class="fa-lg fa-solid fa-dog"></i>&nbsp;&nbsp;Animaux
+                            autorisés</label>
+                    </div>
+                    
                 </fieldset>
             </form>
             <p class="infobar"><i class="fa-solid fa-info" aria-hidden="true"></i> &nbsp;Plus de 500 logements sont
