@@ -465,6 +465,7 @@ i.fa-info {
     }
     .filter-bar>div {
         gap: 14px;
+        width: 100%;
     }
     .filter {
         width: 160px;
