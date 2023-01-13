@@ -409,6 +409,10 @@ i.fa-info {
         flex-direction: row;
         font-size: 13px;
     }
+    .popular-section>div>a {
+            flex-grow: 1;
+            flex-basis: 0;
+    }
     .popular-card>div {
         padding: 12px 24px 12px 10px;
     }
