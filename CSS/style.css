@@ -423,10 +423,19 @@ i.fa-info {
         border-radius: 0 0 20px 20px;
     }
     .filter-bar {
-        gap: 17px;
+        gap: unset;
+        justify-content: space-between;
     }
     .filter-bar>div {
-        gap: 22px;
+        gap: unset;
+        justify-content: space-between;
+        flex-grow: 0.25;
+    }
+    .filter-bar>div:first-of-type {
+        flex-grow: 0;
+    }
+    .filter {
+        flex-grow: 0;
     }
 }
 
@@ -501,7 +510,7 @@ i.fa-info {
         width: 100%;
     }
     .filter {
-        width: 160px;
+        width: 50%;
         padding: 16px 0 14px 13px;
         font-size: 11px;
     }
